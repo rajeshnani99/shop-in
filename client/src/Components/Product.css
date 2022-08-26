@@ -1,0 +1,52 @@
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  min-width: 250px;
+  /* border: 1px solid rgb(247, 242, 242); */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  margin: 0 40px 30px 40px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.card_header {
+  overflow: hidden;
+  height: 300px;
+  width: 250px;
+  /* border: 1px solid black; */
+}
+
+.card_header img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.offer_Price {
+  text-decoration: line-through;
+}
+
+.card_footer button {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 200px;
+  letter-spacing: 3px;
+  color: #fff;
+  background-color: #1565c0;
+  border-radius: 10px;
+  margin-top: 20px;
+}
