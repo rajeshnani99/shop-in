@@ -24,6 +24,20 @@ align-items:center;
  flex:1;
  display:flex;
  align-items:center;
+ &:hover .Home{
+  border: 8px solid;
+  border-image: repeating-linear-gradient(135deg,#F8CA00 0 10px,#E97F02 0 20px,#BD1550 0 30px) 8;
+  -webkit-mask: 
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+     var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: .3s, -webkit-mask-position .4s .4s;
+  
+
+ }
+
  
  `
  ;
@@ -49,8 +63,16 @@ const MenuItem = styled.div`
 font-size:14px;
 cursor:pointer;
 margin-left:25px;
-&:hover .Home{
-    color:yellow;
+&:hover .Link{
+  border: 8px solid;
+  border-image: repeating-linear-gradient(135deg,#F8CA00 0 10px,#E97F02 0 20px,#BD1550 0 30px) 8;
+  -webkit-mask: 
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+     var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: .3s, -webkit-mask-position .4s .4s;
    }
 `
 
@@ -61,16 +83,16 @@ const Navbar = () => {
     
       <Wrapper>
         <Left>
-        <Link to="/" className="Home"style={{ textDecoration: 'none',fontSize:"20px",fontWeight:"bolder" }}>Home</Link>
+        <Link to="/" className="Home" style={{ textDecoration: 'none',fontSize:"20px",fontWeight:"bolder" }}>Home</Link>
        
        
         </Left>
         <Center><Logo>SHOPIN</Logo></Center>
         <Right>
-        <MenuItem> <Link to="/Product" style={{ textDecoration: 'none' ,fontSize:"20px",fontWeight:"bolder"}}>Products</Link></MenuItem>
-            <MenuItem><Link to="/Register" style={{ textDecoration: 'none' ,fontSize:"20px",fontWeight:"bolder"}}>Register</Link></MenuItem>
-            <MenuItem>  <Link to="/Login" style={{ textDecoration: 'none',fontSize:"20px" ,fontWeight:"bolder"}}>Login</Link></MenuItem>
-            <MenuItem>  <Link to="/BestSeller" style={{ textDecoration: 'none',fontSize:"20px",fontWeight:"bolder" }}>BestSeller</Link></MenuItem>
+        <MenuItem> <Link to="/Product" className='Link'  style={{ textDecoration: 'none' ,fontSize:"20px",fontWeight:"bolder"}}>Products</Link></MenuItem>
+            <MenuItem><Link to="/Register" className='Link' style={{ textDecoration: 'none' ,fontSize:"20px",fontWeight:"bolder"}}>Register</Link></MenuItem>
+            <MenuItem>  <Link to="/Login"  className='Link' style={{ textDecoration: 'none',fontSize:"20px" ,fontWeight:"bolder"}}>Login</Link></MenuItem>
+            <MenuItem>  <Link to="/BestSeller"  className='Link'style={{ textDecoration: 'none',fontSize:"20px",fontWeight:"bolder" }}>BestSeller</Link></MenuItem>
 
            
             <MenuItem>
